@@ -1,0 +1,78 @@
+/* Global styles */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
+/* Custom variables */
+:root {
+  --color-primary: #D32F2F;
+  --color-secondary: #1A237E;
+  --color-accent: #FF8F00;
+  --color-background: #F5F5F5;
+  --color-text: #333333;
+}
+
+/* Base styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-md transition-colors;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow;
+}
+
+/* Form styles */
+input:focus, 
+select:focus, 
+textarea:focus {
+  @apply outline-none ring-2 ring-red-600 border-transparent;
+}
+
+/* Custom container padding for mobile */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Accessibility focus styles */
+a:focus, button:focus {
+  @apply outline-none ring-2 ring-red-600;
+}
